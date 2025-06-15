@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HTML Elements Showcase</title>
+	<link rel="stylesheet" href="test.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			line-height: 1.6;
+		}
+
+		section {
+			margin: 40px 0;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+		}
+
+		h2 {
+			color: #333;
+			border-bottom: 2px solid #007bff;
+			padding-bottom: 10px;
+		}
+
+		.demo-container {
+			margin: 20px 0;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 20px 0;
+		}
+
+		th,
+		td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+		}
+
+		th {
+			background-color: #f2f2f2;
+		}
+
+		canvas {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1><abbr title="World Health Organization">WHO</abbr> - HTML Elements Showcase</h1>
+		<nav>
+			<a href="#text-elements">Text Elements</a> |
+			<a href="#forms">Forms</a> |
+			<a href="#media">Media</a> |
+			<a href="#lists">Lists</a> |
+			<a href="#tables">Tables</a> |
+			<a href="#interactive">Interactive</a>
+		</nav>
+		<hr>
+	</header>
+
+	<main>
+		<!-- Text Elements Section -->
+		<section id="text-elements">
+			<h2>Text Elements</h2>
+
+			<div class="demo-container">
+				<h6><del>Deleted text</del> <i><b>Bold italic text</b></i></h6>
+				<p><code>inline code</code> and <mark>highlighted text</mark></p>
+				<pre>
+Preformatted text     with spaces
+    and indentation preserved
+                </pre>
+				<p>
+					<q>This is a quoted text</q>
+				</p>
+				<p>
+					Chemical formula: H<sub>2</sub>O and mathematical expression: E=mc<sup>2</sup>
+				</p>
+				<p>
+					This is a very long word that might need to break:
+					jfosajfojiojifjsoajfoisjiofjajofjsao<wbr>jifjosdjfoajoifjjfsojaojofsojfsjaojfisddiidididi
+				</p>
+			</div>
+		</section>
+
+		<!-- Forms Section -->
+		<section id="forms">
+			<h2>Form Elements</h2>
+
+			<form action="/submit" method="post">
+				<fieldset>
+					<legend>User Information</legend>
+
+					<div class="demo-container">
+						<label for="username">Username:</label>
+						<input type="text" id="username" name="username" required>
+					</div>
+
+					<div class="demo-container">
+						<label for="comments">Comments:</label><br>
+						<textarea id="comments" name="comments" rows="4" cols="50"
+							placeholder="Enter your comments here"></textarea>
+					</div>
+
+					<div class="demo-container">
+						<label for="country">Country:</label>
+						<select id="country" name="country">
+							<optgroup label="North America">
+								<option value="usa">United States</option>
+								<option value="canada">Canada</option>
+							</optgroup>
+							<optgroup label="Europe">
+								<option value="uk">United Kingdom</option>
+								<option value="france">France</option>
+							</optgroup>
+						</select>
+					</div>
+
+					<div class="demo-container">
+						<label for="browser">Choose a browser:</label>
+						<input list="browsers" id="browser" name="browser">
+						<datalist id="browsers">
+							<option value="Chrome">
+							<option value="Firefox">
+							<option value="Safari">
+							<option value="Edge">
+						</datalist>
+					</div>
+
+					<div class="demo-container">
+						<label for="number1">Number 1:</label>
+						<input type="number" id="number1" name="number1" oninput="calculate()">
+						<label for="number2">Number 2:</label>
+						<input type="number" id="number2" name="number2" oninput="calculate()">
+						<label>Sum:</label>
+						<output id="result" name="result">0</output>
+					</div>
+
+					<div class="demo-container">
+						<button type="submit">Submit</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+
+		<!-- Media Elements Section -->
+		<section id="media">
+			<h2>Media Elements</h2>
+
+			<div class="demo-container">
+				<h3>Images</h3>
+				<img src="https://picsum.photos/200/300" alt="Sample Image">
+
+				<h4>Image Map</h4>
+				<img src="https://picsum.photos/400/300" alt="Image Map Example" usemap="#image-map">
+				<map name="image-map">
+					<area shape="rect" coords="0,0,200,150" href="https://example.com/left" alt="Left Section">
+					<area shape="rect" coords="200,0,400,150" href="https://example.com/right" alt="Right Section">
+				</map>
+
+				<h4>Figure with Caption</h4>
+				<figure>
+					<img src="https://picsum.photos/300/200" alt="Figure Image">
+					<figcaption>A beautiful random image from Picsum</figcaption>
+				</figure>
+
+				<h4>Responsive Picture</h4>
+				<picture>
+					<source media="(min-width: 800px)" srcset="https://picsum.photos/600/400">
+					<source media="(min-width: 400px)" srcset="https://picsum.photos/300/200">
+					<img src="https://picsum.photos/200/100" alt="Responsive Image">
+				</picture>
+			</div>
+
+			<div class="demo-container">
+				<h3>Canvas</h3>
+				<canvas id="myCanvas" width="200" height="100">
+					Your browser does not support the canvas element.
+				</canvas>
+			</div>
+
+			<div class="demo-container">
+				<h3>SVG</h3>
+				<svg width="100" height="100">
+					<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+				</svg>
+			</div>
+
+			<div class="demo-container">
+				<h3>Embedded Content</h3>
+				<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials" width="500"
+					height="300"></iframe>
+			</div>
+		</section>
+
+		<!-- Lists Section -->
+		<section id="lists">
+			<h2>List Elements</h2>
+
+			<div class="demo-container">
+				<h3>Unordered List</h3>
+				<ul>
+					<li><data value="21053">Cherry Tomato</data></li>
+					<li>Tea</li>
+					<li>Milk</li>
+				</ul>
+
+				<h3>Ordered List</h3>
+				<ol start="50">
+					<li>Coffee</li>
+					<li>Tea</li>
+					<li>Milk</li>
+				</ol>
+
+				<h3>Description List</h3>
+				<dl>
+					<dt>Coffee</dt>
+					<dd>Black hot drink</dd>
+					<dt>Milk</dt>
+					<dd>White cold drink</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- Tables Section -->
+		<section id="tables">
+			<h2>Table Elements</h2>
+
+			<table>
+				<caption>Monthly Sales Report</caption>
+				<colgroup>
+					<col span="1" style="background-color: #e6f3ff">
+					<col span="2">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Month</th>
+						<th>Sales ($)</th>
+						<th>Profit ($)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>January</td>
+						<td>10,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>February</td>
+						<td>12,000</td>
+						<td>2,500</td>
+					</tr>
+					<tr>
+						<td>March</td>
+						<td>15,000</td>
+						<td>3,000</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Total</td>
+						<td>37,000</td>
+						<td>7,500</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+
+		<!-- Interactive Elements Section -->
+		<section id="interactive">
+			<h2>Interactive Elements</h2>
+
+			<div class="demo-container">
+				<details>
+					<summary>Epcot Center</summary>
+					<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions,
+						international pavilions, award-winning fireworks and seasonal special events.</p>
+				</details>
+
+				<dialog open>This is an open dialog window</dialog>
+
+				<div>
+					<button onclick="showContent()">Show hidden content</button>
+					<template id="flower-template">
+						<h3>Flower</h3>
+						<p>This content was loaded from a template!</p>
+					</template>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<nav>
+			<a href="/html/">HTML</a> |
+			<a href="/css/">CSS</a> |
+			<a href="/js/">JavaScript</a> |
+			<a href="/python/">Python</a>
+		</nav>
+	</footer>
+
+	<script>
+		function calculate() {
+			let num1 = parseFloat(document.getElementById('number1').value) || 0;
+			let num2 = parseFloat(document.getElementById('number2').value) || 0;
+			document.getElementById('result').value = num1 + num2;
+		}
+
+		// Canvas drawing
+		const canvas = document.getElementById('myCanvas');
+		const ctx = canvas.getContext('2d');
+		ctx.fillStyle = 'blue';
+		ctx.fillRect(10, 10, 180, 80);
+
+		function showContent() {
+			let temp = document.getElementById("flower-template");
+			let clon = temp.content.cloneNode(true);
+			document.body.appendChild(clon);
+		}
+	</script>
+</body>
+
+</html>

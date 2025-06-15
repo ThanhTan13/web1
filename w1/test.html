@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>all</title>
+	<link rel="stylesheet" href="test.css">
+	<base href="" target="_blank">
+</head>
+
+<body>
+	<embed type="text/html" src="embed.html" width="500" height="200">
+	<object data="embed.html">
+		<param name="hidden" value="true">
+	</object>
+	<h1><abbr title="World Health Organization">WHO</abbr></h1>
+	<hr>
+	<h6><del>del</del><i><b>b</b></i></h6>
+	<br>
+	<p><code>code</code><mark>mark</mark></p>
+	<pre>
+pre     pre
+	</pre>
+	<q>quote</q>
+	<sub>sub</sub><sup>sup</sup>
+	<p>jfosajfojiojifjsoajfoisjiofjajofjsao<wbr>jifjosdjfoajoifjjfsojaojofsojfsjaojfisddiidididi</p>
+
+	<div>
+		<form action="/submit" method="post">
+			<fieldset>
+				<legend>User Information</legend>
+
+				<!-- Label and Input -->
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required><br><br>
+
+				<!-- Label and Textarea -->
+				<label for="comments">Comments:</label><br>
+				<textarea id="comments" name="comments" rows="4" cols="50"
+					placeholder="Enter your comments here"></textarea><br><br>
+
+				<!-- Select, Optgroup, and Option -->
+				<label for="country">Country:</label>
+				<select id="country" name="country">
+					<optgroup label="North America">
+						<option value="usa">United States</option>
+						<option value="canada">Canada</option>
+					</optgroup>
+					<optgroup label="Europe">
+						<option value="uk">United Kingdom</option>
+						<option value="france">France</option>
+					</optgroup>
+				</select><br><br>
+
+				<!-- Datalist with Input -->
+				<label for="browser">Choose a browser:</label>
+				<input list="browsers" id="browser" name="browser">
+				<datalist id="browsers">
+					<option value="Chrome">
+					<option value="Firefox">
+					<option value="Safari">
+					<option value="Edge">
+				</datalist><br><br>
+
+				<!-- Output for calculation -->
+				<label for="number1">Number 1:</label>
+				<input type="number" id="number1" name="number1" oninput="calculate()">
+				<label for="number2">Number 2:</label>
+				<input type="number" id="number2" name="number2" oninput="calculate()">
+				<label>Sum:</label>
+				<output id="result" name="result">0</output><br><br>
+
+				<!-- Button -->
+				<button type="submit">Submit</button>
+			</fieldset>
+		</form>
+
+		<script>
+			function calculate() {
+				let num1 = parseFloat(document.getElementById('number1').value) || 0;
+				let num2 = parseFloat(document.getElementById('number2').value) || 0;
+				document.getElementById('result').value = num1 + num2;
+			}
+		</script>
+	</div>
+
+	<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials">
+	</iframe>
+
+	<div><!-- Standard Image -->
+		<img src="https://picsum.photos/200/300" alt="Sample Image"><br><br>
+
+		<!-- Image Map -->
+		<img src="https://picsum.photos/400/300" alt="Image Map Example" usemap="#image-map">
+		<map name="image-map">
+			<area shape="rect" coords="0,0,200,150" href="https://example.com/left" alt="Left Section">
+			<area shape="rect" coords="200,0,400,150" href="https://example.com/right" alt="Right Section">
+		</map><br><br>
+
+		<!-- Figure and Figcaption -->
+		<figure>
+			<img src="https://picsum.photos/300/200" alt="Figure Image">
+			<figcaption>A beautiful random image from Picsum</figcaption>
+		</figure><br><br>
+
+		<!-- Picture with multiple sources -->
+		<picture>
+			<source media="(min-width: 800px)" srcset="https://picsum.photos/600/400">
+			<source media="(min-width: 400px)" srcset="https://picsum.photos/300/200">
+			<img src="https://picsum.photos/200/100" alt="Responsive Image">
+		</picture><br><br>
+
+		<!-- Canvas -->
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+			Your browser does not support the canvas element.
+		</canvas><br><br>
+
+		<!-- SVG -->
+		<svg width="100" height="100">
+			<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+		</svg>
+
+		<script>
+			// Canvas drawing
+			const canvas = document.getElementById('myCanvas');
+			const ctx = canvas.getContext('2d');
+			ctx.fillStyle = 'blue';
+			ctx.fillRect(10, 10, 180, 80);
+		</script>
+	</div>
+	<ul> <!--menu-->
+		<li><data value="21053">Cherry Tomato</data></li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ul>
+
+	<dl>
+		<dt>Coffee</dt>
+		<dd>Black hot drink</dd>
+		<dt>Milk</dt>
+		<dd>White cold drink</dd>
+	</dl>
+
+	<ol start="50">
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+	</ol>
+
+	<table>
+		<caption>Monthly Sales Report</caption>
+		<colgroup>
+			<col span="1" style="background-color: #e6f3ff">
+			<col span="2">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Month</th>
+				<th>Sales ($)</th>
+				<th>Profit ($)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>January</td>
+				<td>10,000</td>
+				<td>2,000</td>
+			</tr>
+			<tr>
+				<td>February</td>
+				<td>12,000</td>
+				<td>2,500</td>
+			</tr>
+			<tr>
+				<td>March</td>
+				<td>15,000</td>
+				<td>3,000</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Total</td>
+				<td>37,000</td>
+				<td>7,500</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<details>
+		<summary>Epcot Center</summary>
+		<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions,
+			award-winning fireworks and seasonal special events.</p>
+	</details>
+	<dialog open>This is an open dialog window</dialog>
+	<section>
+		<div>
+			<button onclick="showContent()">Show hidden content</button>
+			<template>
+				<h2>Flower</h2>
+				<img src="img_white_flower.jpg" width="214" height="204">
+			</template>
+
+			<script>
+				function showContent() {
+					let temp = document.getElementsByTagName("template")[0];
+					let clon = temp.content.cloneNode(true);
+					document.body.appendChild(clon);
+				}
+			</script>
+		</div>
+	</section>
+	<nav>
+		<a href="/html/">HTML</a> |
+		<a href="/css/">CSS</a> |
+		<a href="/js/">JavaScript</a> |
+		<a href="/python/">Python</a>
+	</nav>
+
+
+</body>
+
+</html>
